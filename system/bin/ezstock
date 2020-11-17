@@ -1,0 +1,9 @@
+#!/system/bin/sh
+#Stock
+
+mount -o rw,remount /vendor
+chmod 0755 /vendor/bin/thermal-engine
+mount -o ro,remount /vendor
+stop thermal-engine
+start thermal-engine
+echo Stock thermal success!

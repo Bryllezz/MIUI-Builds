@@ -1,0 +1,9 @@
+#!/system/bin/sh
+#Performance
+
+mount -o rw,remount /vendor
+chmod 0644 /vendor/bin/thermal-engine
+mount -o ro,remount /vendor
+stop thermal-engine
+start thermal-engine
+echo Remove thermal success!
